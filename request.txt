@@ -1,0 +1,50 @@
+{
+  authors {
+    id,
+    name,
+    books {
+        id,
+        name
+    }
+  }
+}
+
+
+{
+ author(id: 1) {
+  	id,
+  	name,
+  	books {
+      	    id,
+	        name
+	    }
+	}
+}
+
+
+{
+  books {
+    id,
+    name,
+    author {
+      id,
+      name
+    }
+  }
+}
+
+
+mutation{
+  addBook(name: "law of power", authorId: 1) {
+    id
+    name
+  }
+}
+
+
+mutation {
+  addAuthor(name: "James") {
+    id,
+    name
+  }
+}
